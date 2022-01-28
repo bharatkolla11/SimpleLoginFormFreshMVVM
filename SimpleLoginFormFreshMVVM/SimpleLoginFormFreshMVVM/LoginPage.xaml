@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleLoginFormFreshMVVM.LoginPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="20">
+            <Entry Text="{Binding UserNameEntryText}"
+               HorizontalOptions="FillAndExpand"
+               Placeholder="{Binding UserNameEntryPlaceholder}"
+               ClearButtonVisibility="WhileEditing"
+               Keyboard="Email"
+               AutomationId="UserEntryAutomationID"/>
+
+            <Entry Text="{Binding PasswordEntryText}"
+               HorizontalOptions="FillAndExpand"
+               Placeholder="{Binding PasswordEntryPlaceholder}"
+               ClearButtonVisibility="WhileEditing"
+               Keyboard="Email"
+               IsPassword="True"
+               AutomationId="PasswordEntryAutomationID"/>
+
+            <Button Text="{Binding LoginButtonText}"
+                HorizontalOptions="FillAndExpand"
+                TextColor="White"
+                BackgroundColor="Violet"
+                Command="{Binding LoginButtonCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
