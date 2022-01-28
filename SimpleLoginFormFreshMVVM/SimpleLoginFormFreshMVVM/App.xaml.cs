@@ -12,7 +12,7 @@ namespace SimpleLoginFormFreshMVVM
             InitializeComponent();
 
             var mainPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
-            MainPage = new MainPage();
+            MainPage = new FreshNavigationContainer(mainPage);
         }
 
         protected override void OnStart()
