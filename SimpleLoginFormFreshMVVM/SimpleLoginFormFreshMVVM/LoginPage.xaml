@@ -2,28 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SimpleLoginFormFreshMVVM.LoginPage">
-    <ContentPage.Content>
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="20">
-            <Entry Text="{Binding UserNameEntryText}"
-               HorizontalOptions="FillAndExpand"
-               Placeholder="{Binding UserNameEntryPlaceholder}"
+    
+    <StackLayout HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"
+                 Padding="20" 
+                 Spacing="10">
+
+        <Label Text="{Binding UserNameLabel}"
+               HorizontalOptions="StartAndExpand"
+               FontSize="Subtitle"
+               FontAttributes="Bold"/>
+
+        <Entry HorizontalOptions="FillAndExpand"
+               Text="{Binding UserNameEntryText}"
+               Placeholder="{Binding UserNameEntryPlaceHolder}"
                ClearButtonVisibility="WhileEditing"
-               Keyboard="Email"
                AutomationId="UserEntryAutomationID"/>
 
-            <Entry Text="{Binding PasswordEntryText}"
-               HorizontalOptions="FillAndExpand"
-               Placeholder="{Binding PasswordEntryPlaceholder}"
+        <Label Text="{Binding PasswordNameLabel}"
+               HorizontalOptions="StartAndExpand"
+               FontSize="Subtitle"
+               FontAttributes="Bold"/>
+
+        <Entry HorizontalOptions="FillAndExpand"
+               Text="{Binding PasswordEntryText}"
+               Placeholder="{Binding PasswordEntryPlaceHolder}"
                ClearButtonVisibility="WhileEditing"
-               Keyboard="Email"
                IsPassword="True"
                AutomationId="PasswordEntryAutomationID"/>
 
-            <Button Text="{Binding LoginButtonText}"
+        <Button Text="{Binding SubmitButtonText}"
                 HorizontalOptions="FillAndExpand"
-                TextColor="White"
                 BackgroundColor="Violet"
-                Command="{Binding LoginButtonCommand}"/>
-        </StackLayout>
-    </ContentPage.Content>
+                FontAttributes="Bold"
+                FontSize="Subtitle"
+                Command="{Binding SubmitButtonCommand}"
+                AutomationId="SubmitButtonAutomationID"/>
+
+    </StackLayout>
 </ContentPage>
